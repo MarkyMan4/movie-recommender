@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Choose Your Options</legend>
+                <div class="form-group col-md-7">
+                    <div class="w-75">
+                        {{ form.genres.label(class="form-control-label") }}
+                        {{ form.genres(class="form-control form-control-lg") }}
+                    </div>
+
+                    <br>
+
+                    <div class="w-25">
+                        {{ form.num_results.label(class="form-control-label") }}
+                        {{ form.num_results(class="form-control form-control-lg") }}
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="w-25">
+                        {{ form.submit(class="form-control form-control-lg") }}
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+{% endblock content %}
